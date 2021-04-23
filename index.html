@@ -1,14 +1,223 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>MyFirstApp</title>
-  <base href="/">
+<!DOCTYPE html>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="styles.css"></head>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        body {
+
+ }
+    </style>
+</head>
 <body>
-  <app-root></app-root>
-<script src="runtime.js" defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Xecaps</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="test/something.html">Something</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#personal">Personal</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Hello, my name is Max</h1>
+                <p class="lead">A small place in the galaxy about me. Nothing spectacular to see, just me.</p>
+                <hr class="md-4">
+                <p>
+                    I've worked at an engineering firm for 20+ years now developing software for engineers
+                    and designers to use in their day to day work. I have a degree in Mechanical Engineering
+                    Technology and fell into development via getting into things I shouldn't have. Since 
+                    then, I've gone deeper down the rabbit hole as the years have gone by. 
+                </p>
+
+                <small class="p-2 text-info">just needed some color here...</small>
+            </div>
+        </div>
+
+        
+    
+        <div class="row form-group">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                        .NET
+                        <small class="float-right font-weight-light text-light ">10+ years</small>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">                
+                            Wish I could say most of my time has been with c#, but alas, it has been vb.
+                            I have a few simple wpf and console applications that I support that are c#, but
+                            mostly, a large desktop vb application has consumed most of my time.
+                        </p>
+                        <p class="card-text">
+                            I've tried to clean up some bad practices that we inherited, but it has been a
+                            slow process. I have a couple of projects that use Entity Framework in a very
+                            limited way. I did use Dapper in a recent project that I built and was pleasantly
+                            surprised at how simple it was to get up and running.
+                        </p>
+                        <p class="card-text">
+                            Recently we have introduced a couple of simple API projects to our process
+                            so we can allow other groups to get access to some of our data. These are 
+                            pretty basic crud processes hosted internally. 
+                        </p>
+                    </div>
+                </div>           
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                        SQL Server
+                        <small class="float-right font-weight-light text-light ">15+ years</small>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Used sql server constantly for the quite some time now. Daily usage usually
+                            involves running queries of some kind. Not so much on administration side. Some
+                            time has been spent writing stored procedures. Would like to find a good way of
+                            source controlling changes to stored procedures, but my team has continued to
+                            struggle with changes.
+                        </p>
+                        <p class="card-text">
+                            I have used various tools and languages to access said data such as Access,
+                            Excel, Entity Framework, Dapper, Power BI, and Tableau to name a few. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                        git<small class="float-right font-weight-light text-light ">10+ years</small>                        
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            Big proponent of source control and using branches and pull requests. I have had
+                            my team somewhat follow the
+                            <a href="https://nvie.com/posts/a-successful-git-branching-model/">git flow</a>
+                            branching model for work, with a few tweaks that work for my team. For personal
+                            projects, I usually just a simple quick branch then merge workflow.
+                        </p>
+                    </div>
+                </div>      
+            </div>
+        
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                        HTML/CSS/JavaScript
+                        <small class="float-right font-weight-light text-light ">10+ years</small>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                        I have written html, css and javascript in the past, but not for my day to day
+                        job in the last 5+ years. However, I have been playing around with them a bit 
+                        over the last few years in my spare time. Most recently I have been using 
+                        bootstrap for styling and layout. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row form-group">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                        Typescript/Angular
+                        <small class="float-right font-weight-light text-light ">1+ years</small>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                        Have been spending some time this last year learning typescript and angular in 
+                        hopes of getting back into web development. So far, I have enjoyed seeing some
+                        structure to JavaScript. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold ">
+                        Unity 3D
+                        <small class="float-right font-weight-light text-light ">2+ years</small>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            I have dabbled with Unity3D off and on now for the past few years. Mostly as a
+                            distraction from my day to day job. Have created a couple of really simple games
+                            with and for my kids. I did oringally start looking at it because of some work
+                            I was doing involving 3D modeling we use at work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="md-4"> 
+
+        <div class="row" name="personal">
+            <div class="mx-auto col-md-12">
+                <div class="card">
+                    <div class="card-header bg-primary font-weight-bold">
+                    Personal
+                    </div>
+                    
+                    <div class="card-body">                
+                        <p class="card-text">
+                            I am and have always been a huge Star Wars fan. I grew up pretending to be Luke
+                            Skywalker and Han Solo. I've been overjoyed at seeing the new series that are
+                            being developed. Mandalorian has been awesome and can't wait for more. 
+                            Maybe even have to add to my Yoda/Grogu shelf. Really looking forward to 
+                            the coming years with some of the content that has been promised. The 
+                            Rogue Squadron movie is going to be awesome. 
+                        </p>
+                        <p class="card-text">
+                            I also love reading. I own most of the Star Wars extended universe novels
+                            (now legends), which sadly are no longer cannon. However, my favorite 
+                            author right now is Brandon Sanderson. His books are amazing. Mistborn 
+                            series hooked me pretty quick but Stormlight Archive took a bit longer 
+                            to get into. I had to come back to the first book after some time off. 
+                            Once I did get into it, I couldn't put it down and read the next two books
+                            rather quick and re-read the series before the 4th one came out. And of 
+                            course no section about books can skip mentioning Harry Potter. Another
+                            series that I have read multiple times now. 
+                        </p>
+
+                        <p class="card-text">
+                            If you want me to talk for a while without taking a breath, mention and of these
+                            and I will ramble on for quite some time. You have been warned. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </html>
