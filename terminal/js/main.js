@@ -3,60 +3,45 @@ const contact = document.querySelector('#contact');
 const aboutContent = document.querySelector('#about-content');
 const contactContent = document.querySelector('#contact-content');
 
+
+const backColor = window.getComputedStyle(document.documentElement).getPropertyValue("--text-color");
+
 about.addEventListener('click', openAboutBox);
 contact.addEventListener('click', openContactBox);
 
 function openAboutBox() {
-    const aboutBox = new WinBox({
-        title: 'About Me',
-        width: '400px',
-        height: '400px',
-        top: 50,
-        right: 50,
-        bottom: 50,
-        left: 50,
-        mount: aboutContent,
-        onfocus: function () {
-            this.setBackground('#00aa00');
-        },
-
-        onblur: function () {
-            this.setBackground('#777');
-        },
-        onclose: function () {
-            about.addEventListener('click', openAboutBox);
-        },
-        class: "no-min no-max no-full no-resize"
-    });
-    about.removeEventListener('click', openAboutBox);
-    about.addEventListener('click', () => {
-        aboutBox.focus();
-    })
+    createWinbox('About Me', about, aboutContent, openAboutBox);
 };
 
 function openContactBox() {
-    const contactBox = new WinBox({
-        title: 'contact Me',
+    createWinbox('Contact Me', contact, contactContent, openContactBox, 150);
+}
+
+function createWinbox(section, linkToBind, contentToUse, openMethod, locationAdjustment = 0) {
+    const displayBox = new WinBox({
+        title: section,
         width: '400px',
         height: '400px',
-        top: 150,
+        top: 50 + locationAdjustment,
         right: 50,
         bottom: 50,
-        left: 250,
-        mount: contactContent,
+        left: 50 + locationAdjustment,
+        mount: contentToUse,
+        class: 'no-min no-max no-full no-resize',
         onfocus: function () {
-            this.setBackground('#00aa00');
+            this.setBackground(backColor);
         },
+
         onblur: function () {
             this.setBackground('#777');
         },
         onclose: function () {
-            contact.addEventListener('click', openContactBox);
-        },
-        class: "no-min no-max no-full no-resize"
+            linkToBind.addEventListener('click', openMethod);
+        }
     });
-    contact.removeEventListener('click', openContactBox);
-    contact.addEventListener('click', () => {
-        contactBox.focus();
-    });
+
+    linkToBind.removeEventListener('click', openMethod);
+    linkToBind.addEventListener('click', () => {
+        displayBox.focus();
+    })
 }

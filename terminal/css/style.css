@@ -7,8 +7,11 @@
 }
 
 :root {
-    --text-color: #00aa00;
+    --text-color: #005fb8;
+    --text-colox: #00bb00;
+    --text-coloz: #006600; 
 }
+
 body {
     font-family: 'Roboto Mono', sans-serif;
     background-color: #333;
